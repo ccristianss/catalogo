@@ -16,17 +16,16 @@ const Card_Vehiculos = ({ vehiculo }) => {
 
 
     return (
-        <div className="max-w-xs rounded overflow-hidden shadow-lg mx-auto my-4">
+        <div className="max-w-sm rounded overflow-hidden shadow-lg mx-auto my-4">
             <img className="w-full" src={vehiculo.photo} alt={vehiculo.marca} />
             <div className="px-6 py-4">
-                <div className="font-bold text-xl mb-2">Detalles del Vehículo</div>
+                <div className="font-bold text-xl mb-2">{vehiculo.marca} {vehiculo.referencia} {vehiculo.modelo}</div>
                 <p className="hidden"><strong>ID:</strong> {vehiculo.id}</p>
                 <p><strong>Referencia:</strong> {vehiculo.referencia}</p>
                 <p><strong>Marca:</strong> {vehiculo.marca}</p>
                 <p><strong>Modelo:</strong> {vehiculo.modelo}</p>
                 <p><strong>Placa:</strong>{vehiculo.placa}</p>
                 <p><strong>Precio:</strong>{vehiculo.precio}</p>
-                <p><strong>Estado:</strong> {vehiculo.estado}</p>
                 <p><strong>Propietario:</strong>{propietario.nombres}</p>
             </div>
         </div>

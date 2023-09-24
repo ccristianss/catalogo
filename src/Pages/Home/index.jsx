@@ -1,41 +1,27 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import Card from "../../Components/Card";
 import Layout from "../../Components/Layout";
-import ProductDetail from "../../Components/ProductDetail";
+import Card_Vehiculos_Home from "../../Components/Card_Vehiculos_Home";
 
 
 function Home() {
 
-    const [products, setProducts] = useState(null);
+    const [vehiculo, setVehiculos] = useState(null);
 
     useEffect(() => {
-        fetch("https://api.escuelajs.co/api/v1/products/")
+        fetch("https://kaoxdc.pythonanywhere.com/api/carro/")
             .then(r => r.json())
-            .then(d => console.log(setProducts(d)))
+            .then(d => console.log(setVehiculos(d)))
     }, [])
-    /*
-        fetch("https://api.escuelajs.co/api/v1/products/")
-            .then((r) => {
-                return r.json();
-            }).then((d) => {
-    
-                const listProducts = d.map((p) => {
-                    return <Card key={p.id} product={p} />
-                });
-                setProducts(listProducts);
-            });
-      */
+
     return (
         <>
-            Home
             <Layout>
-                <div className='grid gap-4 grid-cols-4 w-full max-w-screen-lg'>
-                    {products?.map(p => (
-                        <Card key={p.id} product={p} />
+                <div className='grid gap-1 grid-cols-2 w-full max-w-screen-xl my-4'>
+                    {vehiculo?.map(v => (
+                        <Card_Vehiculos_Home key={v.id} vehiculo={v} />
                     ))}
                 </div>
-                <ProductDetail />
             </Layout>
         </>
     );

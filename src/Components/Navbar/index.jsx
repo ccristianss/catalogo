@@ -15,42 +15,27 @@ const Navbar = () => {
             <ul className="flex items-center gap-3">
                 <li className="font-semibold text-lg gap-3">
                     <NavLink to='/'
-                    className={({isActive}) => isActive ? activeStyle: undefined}>
+                        className={({ isActive }) => isActive ? activeStyle : undefined}>
                         Catalogo
                     </NavLink>
                 </li>
                 <li>
                     <NavLink to='/'
-                    className={({isActive}) => isActive ? activeStyle: undefined}>
+                        className={({ isActive }) => isActive ? activeStyle : undefined}>
                         Inicio
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to='/contacto'
-                    className={({isActive}) => isActive ? activeStyle: undefined}>
-                        Contacto
-                    </NavLink>
-                </li>
-                <li>
-                    <NavLink to='/propietarios'
-                    className={({isActive}) => isActive ? activeStyle: undefined}>
-                        Propietarios
-                    </NavLink>
-                </li>
-                <li>
                     <NavLink to='/vehiculos'
-                    className={({isActive}) => isActive ? activeStyle: undefined}>
+                        className={({ isActive }) => isActive ? activeStyle : undefined}>
                         Vehiculos
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to='/*'
-                    className={({isActive}) => isActive ? activeStyle: undefined}>
-                        Not Found
+                    <NavLink to='/propietarios'
+                        className={({ isActive }) => isActive ? activeStyle : undefined}>
+                        Propietarios
                     </NavLink>
-                </li>
-                <li>
-                    { context.count }
                 </li>
             </ul>
         </div>

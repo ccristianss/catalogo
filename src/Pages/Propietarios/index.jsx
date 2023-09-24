@@ -17,8 +17,8 @@ function Propietarios() {
     return (
 
         <>
-            Propietarios
-            <div>
+            <div className='grid gap-1 grid-cols-4 w-full max-w-screen-xl my-4'>
+
                 {propietarios?.map(p => (
                     <Card_propietarios key={p.id} propietario={p} />
                 ))}
